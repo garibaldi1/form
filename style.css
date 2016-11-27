@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+input {
+    margin-right:2px;
+}
+span {
+    background-image: url(img/yes-no.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+}
+input:invalid + span {
+    background-position: -27px -11px;
+}

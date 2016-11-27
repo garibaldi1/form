@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Моя форма</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <script language = "JavaScript" src="script.js"></script>
+    </head>
+    <body>
+        <h1>Пожалуйста, заполните обязательные поля</h1>
+        <hr>
+        <form method="post" action="post.php" id="form1">
+            Имя: <input type="text" name ="name" placeholder="Введите имя"><span></span><br>
+            <br>
+            Возраст: <input type="number" name ="number" required><span></span><br>
+            <br>
+            E-mail: <input type="email" placeholder="example@...ru"><span></span><br>
+            <br>
+            Сайт: <input type="url" required><span></span><br>
+            <br>
+            <input type="submit" name = "submit">
+        </form>
+    </body>
+</html>
