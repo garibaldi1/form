@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Телефонная книга</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+        <script language = "JavaScript" src="script.js"></script>
+    </head>
+    <body>
+        <h1>Телефонная книга</h1>
+        <hr>
+        <form>
+            Имя: <input type="text" id="name" placeholder="Введите имя" required/><br>
+            Телефон: <input type="tel" id="tel1" pattern ="8[0-9]{10}" required/><br>
+            <input type="submit" name="submit" value="сохранить" onclick="save();"/>
+        </form>
+        <hr>
+        <h3>Телефонный справочник</h3>
+        <table border = "1px">
+            <tr>
+                <td>Имя</td>
+                <td>Телефон</td>
+            </tr>
+        </table>
+        <hr>
+        <input type="button" id="delete" value="Удалить все данные" onclick="del_storage()"/> 
+        <hr>
+        <input type="button" value="тестовые параметры" onclick="create_table();"/>
+    </body>
+</html>
