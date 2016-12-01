@@ -1,0 +1,19 @@
+body {
+    margin-left: 30%;
+    margin-right: 35%;
+    border: 1px solid black;
+    padding: 5%;
+    border-radius: 5px;
+}
+#login {
+    margin-bottom: 10px;
+}
+#pass {
+    margin-bottom: 10px;
+}
+#submit {
+    margin-top: 20px;
+}
+h2 {
+    text-align: center;
+}
