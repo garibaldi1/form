@@ -4,19 +4,21 @@
         <title>КРБ "Витязь" - панель администратора</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
     </head>
     <body>
         <h3>Панель администратора</h3>
         <hr>
         <p>Добавление сотрудника</p><br>
-        <form method="post" action="adduser.php">
-            Фамилия:<input type="text" name="lastname" placeholder="Введите фамилию"><br>
-            Имя:<input type="text" name="name" placeholder="Введите имя"><br>
-            Отчество:<input type="text" name="su_name" placeholder="Введите фамилию"><br>
-            Уровень доступа: <input type="text" name="dost"><br>
-            Логин: <input type="text" name="login"><br>
-            Пароль: <input type="text" name="pass"><br>
+        <form method="post">
+            <input type="text" name="lastname" placeholder="Введите фамилию" required><br>
+            <input type="text" name="name" placeholder="Введите имя" required><br>
+            <input type="text" name="su_name" placeholder="Введите отчество" required><br>
+            <input type="text" name="dost" required><br>
+            <input type="text" name="login" placeholder="Логин" required><br>
+            <input type="text" name="pass" placeholder="Пароль" required><br>
             <input type="submit" name="submit" value="Зарегистрировать"><br>
         </form>
+        <hr>
     </body>
 </html>
