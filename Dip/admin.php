@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
     <head>
         <title>КРБ "Витязь" - панель администратора</title>
@@ -15,7 +15,6 @@
             <input type="text" name="name" placeholder="Введите имя" required><br>
             <input type="text" name="su_name" placeholder="Введите отчество" required><br>
             <input type="tel" name="tel" placeholder="80000000000" required><br>
-            <input type="text" name="dost" required><br>
             <input type="text" name="login" placeholder="Логин" required><br>
             <input type="text" name="pass" placeholder="Пароль" required><br>
             <input type="submit" name="submit" value="Зарегистрировать"><br>
