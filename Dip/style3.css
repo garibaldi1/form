@@ -5,4 +5,26 @@
  padding: 2%;
  border-radius: 10px;
  margin-left: 40%;
+ position: absolute;
+ z-index: 2;
+ background-color: whitesmoke;
+}
+
+#reg {
+    margin-left: 6%;
+}
+
+#add p{
+    text-align: center;
+}
+
+#shadow {
+    position: fixed;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background:#000;
+    opacity: 0.5;
+    left:0;
+    top:0;
 }

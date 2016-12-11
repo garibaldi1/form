@@ -55,16 +55,17 @@
         <form>
             <input type="button" name ="add1" value="Добавить спортсмена" onclick="addsport();">
         </form>
-        <form method="post" id = "add">
+        <form method="post" id = "add" action = "add.php">
+            <p>Регистрация</p>
             <input type="text" name="fio" placeholder="Введите фамилию" required><br>
             <input type="text" name="name" placeholder="Введите Имя" required><br>
             <input type="text" name="suname" placeholder="Введите Отчество" required><br>
-            <input type="date" name="date" required><br>
+            <input type="date" name="date" placeholder="ДДММГГГГ" required><br>
             <input type="tel" name="tel" placeholder="81234567890" required><br>
             <input type ="number" name ="height" placeholder="Введите рост" required><br>
             <input type ="number" name="weight" placeholder="Введите вес" required><br>
-            <input type="submit" name="reg" value="Зарегистрировать">
-            <input type ="button" name ="cancle" value ="Отмена" style="margin-left: 25%;" onclick="cancle();">
+            <input type ="submit" id="reg" name="reg" value="Зарегистрировать">
+            <input type ="button" name ="cancle" value ="Отмена" style="margin-left: 28%;" onclick="cancle1();">
         </form>
     </body>
 </html>
