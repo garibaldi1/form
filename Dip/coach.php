@@ -27,28 +27,20 @@
             <tbody>
                 <?php
                 require_once ('vityaz.php');
-                $query = "SELECT * FROM `sportsman`"
+                $query = "SELECT*FROM `vityaz`.`sportsman` ORDER BY `last_name`;";
+                $result = mysqli_query($link,$query);
+                while($row=mysqli_fetch_array($result)){
+                    $id = $row['id'];
+                    $lastname = $row['last_name'];
+                    $name = $row['name'];
+                    $suname = $row['suname'];
+                    $date = $row['date_bith'];
+                    $tel = $row['tel'];
+                    $height = $row['height'];
+                    $weight = $row['weight'];
+                    echo "<tr><td>$lastname</td><td>$name</td><td>$suname</td><td>$date</td><td>$tel</td><td>$height</td><td>$weight</td></tr>";
+                }
                 ?>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
             </tbody>
         </table>
         <br>
