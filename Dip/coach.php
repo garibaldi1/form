@@ -11,7 +11,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script>
         $( function() {
-        $( "#datepicker" ).datepicker({changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd"});
+        $( "#datepicker").datepicker({changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd"});
+        } );
+        </script>
+        <script>
+        $( function() {
+        $( "#datepicker2").datepicker({changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd"});
         } );
         </script>
     </head>
@@ -21,6 +26,7 @@
         <p>Карточка спортсмена</p>
         <form>
             <input type="button" name ="add1" value="Добавить спортсмена" onclick="addsport();">
+            <input type="button" name="add2" value="Создать мероприятие" onclick="addcompetition();">
         </form>
         <table border="2px">
             <thead>
@@ -50,7 +56,7 @@
                     $height = $row['height'];
                     $weight = $row['weight'];
                     $coach = $row['coach'];
-                    echo "<tr><td>$lastname</td><td>$name</td><td>$suname</td><td>$date</td><td>$tel</td><td>$height</td><td>$weight</td><td>$coach</td></tr>";
+                    echo "<tr><td>$lastname</td><td>$name</td><td>$suname</td><td>$date</td><td>$tel</td><td>$height</td><td>$weight</td><td>$coach</td><td><a href = 'delete.php'>Удалить</a></td><td><a href='edit.php'>Редактировать</a></td></tr>";
                 }
                 ?>
             </tbody>
@@ -67,6 +73,14 @@
             <input type ="number" name="weight" placeholder="Введите вес" required><br>
             <input type ="submit" id="reg" name="reg" value="Зарегистрировать">
             <input type ="button" name ="cancle" value ="Отмена" style="margin-left: 28%;" onclick="cancle1();">
+        </form>
+        <form method="post" id="add2" action="add2.php">
+            <p>Создать мероприятие</p>
+            <input type="text" name="header" placeholder="Название мероприятия" style="margin-left: 5%;" required><br>
+            <input type="text" id="datepicker2" name="date" style="margin-left: 5%;" placeholder="выберите дату" required><br>
+            <textarea name="place" style="margin-left: -4%;" placeholder="место проведения" required></textarea>
+            <input type ="submit" id="reg2" name="reg" value="Зарегистрировать" style="margin-left: 10%;">
+            <input type ="button" name ="cancle" value ="Отмена" style="margin-left: 29%;" onclick="cancle2();">
         </form>
     </body>
 </html>
