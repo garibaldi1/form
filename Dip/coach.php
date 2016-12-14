@@ -5,12 +5,23 @@
         <title>Тренерская</title>
         <link rel="stylesheet" href="style2.css">
         <link rel="stylesheet" href="style3.css">
-        <script text="javascript" src="script.js"></script>
+        <script language="javascript" src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script>
+        $( function() {
+        $( "#datepicker" ).datepicker({changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd"});
+        } );
+        </script>
     </head>
     <body>
         <h3>Тренерская</h3>
         <hr>
         <p>Карточка спортсмена</p>
+        <form>
+            <input type="button" name ="add1" value="Добавить спортсмена" onclick="addsport();">
+        </form>
         <table border="2px">
             <thead>
                 <tr>
@@ -38,21 +49,19 @@
                     $tel = $row['tel'];
                     $height = $row['height'];
                     $weight = $row['weight'];
-                    echo "<tr><td>$lastname</td><td>$name</td><td>$suname</td><td>$date</td><td>$tel</td><td>$height</td><td>$weight</td></tr>";
+                    $coach = $row['coach'];
+                    echo "<tr><td>$lastname</td><td>$name</td><td>$suname</td><td>$date</td><td>$tel</td><td>$height</td><td>$weight</td><td>$coach</td></tr>";
                 }
                 ?>
             </tbody>
         </table>
         <br>
-        <form>
-            <input type="button" name ="add1" value="Добавить спортсмена" onclick="addsport();">
-        </form>
         <form method="post" id = "add" action = "add.php">
             <p>Регистрация</p>
             <input type="text" name="fio" placeholder="Введите фамилию" required><br>
             <input type="text" name="name" placeholder="Введите Имя" required><br>
             <input type="text" name="suname" placeholder="Введите Отчество" required><br>
-            <input type="date" name="date" placeholder="ДДММГГГГ" required><br>
+            <input type="text" id="datepicker" name="date" placeholder="ДДММГГГГ" required><br>
             <input type="tel" name="tel" placeholder="81234567890" required><br>
             <input type ="number" name ="height" placeholder="Введите рост" required><br>
             <input type ="number" name="weight" placeholder="Введите вес" required><br>

@@ -8,6 +8,7 @@
  position: absolute;
  z-index: 2;
  background-color: whitesmoke;
+ margin-top: -30%;
 }
 
 #reg {
