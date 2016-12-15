@@ -23,11 +23,12 @@
     <body>
         <h3>Тренерская</h3>
         <hr>
-        <p>Карточка спортсмена</p>
-        <form>
+        <form action="exit.php"> 
             <input type="button" name ="add1" value="Добавить спортсмена" onclick="addsport();">
             <input type="button" name="add2" value="Создать мероприятие" onclick="addcompetition();">
+            <input type="submit" value="Выход">
         </form>
+         <p>Карточка спортсмена</p>
         <table border="2px">
             <thead>
                 <tr>
@@ -62,6 +63,31 @@
             </tbody>
         </table>
         <br>
+        <hr>
+        <p>Мероприятия</p>
+        <table border = "2px">
+            <thead>
+                <tr>
+                    <th>Название мероприятия</th>
+                    <th>Место проведения</th>
+                    <th>Дата проведения</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                require_once ('vityaz.php');
+                $query = "SELECT*FROM `vityaz`.`competition` ORDER BY `date`;";
+                $result = mysqli_query($link,$query);
+                while($row = mysqli_fetch_array($result)){
+                    $id = $row['id'];
+                    $competition = $row['competition'];
+                    $place = $row['place'];
+                    $date = $row['date'];
+                    echo "<tr><td>$competition</td><td>$place</td><td>$date</td><td><a href = ''>Удалить</a></td><td><a href = ''>Редактировать</a></td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
         <form method="post" id = "add" action = "add.php">
             <p>Регистрация</p>
             <input type="text" name="fio" placeholder="Введите фамилию" required><br>
