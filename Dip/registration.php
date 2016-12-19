@@ -9,7 +9,7 @@
     <body>
         <h2>Авторизуйтесь пожалуйста</h2>
         <hr>
-        <form method="post" action="login.php">
+        <form method="post" action="login.php" autocomplete="off">
             <input type ="text" name="login" id = "login" placeholder="Введите логин"/><br>
             <input type="password" name="pass" id="pass" placeholder="Введите пароль"/><br>
             <input type="submit" name="submit" id="submit" value="Вход"/><br>

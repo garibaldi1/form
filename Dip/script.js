@@ -28,5 +28,19 @@ function cancle2(){
    var shadow = document.getElementById('shadow');
    shadow.parentNode.removeChild(shadow);
 }
+function addnotes(){
+   var layer = document.createElement('div');
+   layer.id = 'shadow';
+   document.body.appendChild(layer);
+   
+   var element = document.getElementById('add3');
+   element.style.display = 'block'; 
+}
 
+function cancel3() {
+   var element = document.getElementById('add3');
+   element.style.display = 'none';
+   var shadow = document.getElementById('shadow');
+   shadow.parentNode.removeChild(shadow);
+}
 

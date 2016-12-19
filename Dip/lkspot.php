@@ -8,6 +8,9 @@
     <body>
         <h3>Личный кабинет</h3>
         <hr>
+        <ul>
+            <li><a href="notes.php">Мои заметки</a></li>
+        </ul>
         <p>Ближайшее мероприятия</p>
          <table border = "2px">
             <thead>

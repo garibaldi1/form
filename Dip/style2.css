@@ -4,3 +4,21 @@ h3 {
 input {
     margin: 0.2%;
 }
+a {
+   text-decoration: none;
+   background-color: rgb(61, 83, 153);
+   color: whitesmoke;
+   
+}
+li {
+    list-style-type: none;
+}
+li a:hover {
+   background-color: black; 
+}
+table a:hover {
+    background-color: black;
+}
+ul li{
+    display: inline;
+}

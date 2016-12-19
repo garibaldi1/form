@@ -88,7 +88,7 @@
                 ?>
             </tbody>
         </table>
-        <form method="post" id = "add" action = "add.php">
+        <form method="post" id = "add" action = "add.php" autocomplete="off">
             <p>Регистрация</p>
             <input type="text" name="fio" placeholder="Введите фамилию" required><br>
             <input type="text" name="name" placeholder="Введите Имя" required><br>
@@ -100,7 +100,7 @@
             <input type ="submit" id="reg" name="reg" value="Зарегистрировать">
             <input type ="button" name ="cancle" value ="Отмена" style="margin-left: 28%;" onclick="cancle1();">
         </form>
-        <form method="post" id="add2" action="add2.php">
+        <form method="post" id="add2" action="add2.php" autocomplete="off">
             <p>Создать мероприятие</p>
             <input type="text" name="header" placeholder="Название мероприятия" style="margin-left: 5%;" required><br>
             <input type="text" id="datepicker2" name="date" style="margin-left: 5%;" placeholder="выберите дату" required><br>
